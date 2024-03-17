@@ -35,4 +35,5 @@ console.log(null == undefined); //TRUE because JS has a special case called "loo
 
 //Comparisons with ===
 console.log("45" === 45); //FALSE because === checks datatypes as well as values
+console.log(null === undefined); //false because datatype is different
 
