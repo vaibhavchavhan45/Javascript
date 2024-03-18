@@ -41,4 +41,4 @@ let val = 1;
 let convertToBoolean = Boolean(val)
 console.log(convertToBoolean);       //all values are true except zero,undefined and null (zero,undefined and null ==> false)
 
-
+//link : https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
