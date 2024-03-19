@@ -30,8 +30,8 @@ let url = "https://vaibhav.com/vaibhav%20chavhan"
 console.log(url.replace( '%20', '-')); //replace first parameter with second
 console.log(url.includes('vaibhav')); //It check whether vaibhav is present or not if present then TRUE if not then o/p is FALSE
 
-const str = "vaibhav-chavhan-45"    //on the basis of parameter method splits variable value in array type e.g. ['a', 'abc', '123']
-console.log(str.split('-'));
+const str = "vaibhav-chavhan-45"    
+console.log(str.split('-'));        //on the basis of parameter method splits variable value in array type e.g. ['a', 'abc', '123']
 console.log(str.anchor('vaibhav')); //write o/p in the foem of html <a> tag
 console.log(str.at(5));             //same as charAt
 console.log(str.big());             //gives o/p in <big> tag of html (parameter not required)
