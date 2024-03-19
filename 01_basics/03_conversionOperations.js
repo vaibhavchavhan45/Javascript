@@ -29,8 +29,6 @@ false ==> 0
 "Vaibhav" ==> NaN 
 */
 
-
-
 let nums = 33;
 let convertInString = String (nums);
 console.log(convertInString);        //op --> 33 
