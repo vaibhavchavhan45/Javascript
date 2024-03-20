@@ -43,7 +43,7 @@ console.log(str.codePointAt(5));    //unicode of given index
 const firstStr = "vaibhav"
 const secondStr = "chavhan"
 console.log(firstStr.concat(secondStr)); //combines both String
-console.log(firstStr.endsWith('v'));    //check given string ends with provided parameter or not
+console.log(firstStr.endsWith('v'));    //check given string ends with provided parameter or Not.
 
 
 
