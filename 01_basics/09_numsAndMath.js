@@ -29,9 +29,16 @@ console.log(Math.random());      //this method gives random value in between 0 &
 console.log(Math.random()*10 + 1);
 console.log(Math.floor(Math.random()*10 + 1));
 
+//Random number generator betn min and max
 const max = 50;
 const min = 40;
-console.log(Msth.floor( Math.random() * (max - min + 1) + min) );
+console.log(Math.floor( Math.random() * (max - min + 1) + min) );
+
+//Dice
+const upper = 6;
+const lower = 1;
+console.log(Math.floor(Math.random() * (upper - lower +1) + lower));
+
 
 
 
