@@ -39,7 +39,7 @@ console.log(Array.from(Object.entries({name : "vaibhav"}))); //Object.entries() 
 let val1 = 100
 let val2 = 500
 let val3 = 1000
-console.log(Array.of(val1, val2, val3));   //creates new array from arguments
+console.log(Array.of(val1, val2, val3));  //creates new array from arguments
 
 const a = true 
 const b = "ash"
