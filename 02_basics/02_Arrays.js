@@ -23,7 +23,8 @@ const multiversOfArray = [1, 2, 3, 4, 5, [6, 7, 8], [10 ,20 ,30, [10, 20, [100, 
 const combined = multiversOfArray.flat(Infinity)  //give output of nested array in a single array
 console.log(combined);
 
-//Methods of Array
+/***** Methods of Array *****/
+
 //Array.isArray()
 console.log(Array.isArray(combined));    //Use to check given parameter as array or not
 
@@ -33,7 +34,6 @@ console.log(Array.from("vaibh"));      //creates each and every instance in new 
 console.log(Array.from({name : "vc"})); //This is a object which is not itterable so o/p  is [] 
 
 console.log(Array.from(Object.entries({name : "vaibhav"}))); //Object.entries() is used to convert object into array including key & value in pair like [["name", "vaibhav"]] and then from() works
-
 
 //Array.of()
 let val1 = 100
