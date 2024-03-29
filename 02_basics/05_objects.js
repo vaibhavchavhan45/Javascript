@@ -1,4 +1,4 @@
-//Destructuring of objects
+//destructuring of objects
 const course = {
     courseName : "BE in Extc",
     courseDuration : "4yrs",
