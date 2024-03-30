@@ -13,7 +13,7 @@ normal();
     console.log("server accessed");
 })();
 //this IIFE function will give error because above function is not ended yet
-//to run this IIFE function, the function above IIFE must be terminated   
+//to run this IIFE function, the function above IIFE must be terminated.  
 
 
 //named IIFE
