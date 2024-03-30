@@ -7,14 +7,14 @@ const obj = {
     car5 : "ROLLS ROYCE"
 }
 for (const key in obj) {
-    //console.log(`${key} :- ${obj [key] }`);
+    console.log(`${key} :- ${obj [key] }`);
 }
 
 
 //for in loop on array
 const arr = ['JEE', 'NEET', 'GATE', 'SSC', 'HSC']
 for (const key in arr) {
-    //console.log(`value at index ${key} is ${arr[key]}`);
+    console.log(`value at index ${key} is ${arr[key]}`);
 }
 
 
