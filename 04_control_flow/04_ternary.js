@@ -10,7 +10,7 @@ value = null ?? 5
 value = 15 ?? 20 ?? undefined
 value = null ?? undefined
 value = undefined ?? null
-console.log(value);
+console.log(value)
 
 
 //Ternary
