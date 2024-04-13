@@ -41,9 +41,6 @@ let date = new Date("2024-03-19")  //time in millisecond from 1 jan 1970 to 2024
 console.log(date.getTime());
 
 
-
-//node 01_basics/10_datesInJS.js
-
 //convert time from milliseconds to seconds
 let formattedDate = Date.now()
 formattedDate = formattedDate / 1000
@@ -56,7 +53,7 @@ console.log( Math.round(Date.now()/1000) );
 let theDate = new Date()
 console.log(theDate.getDate());
 console.log(theDate.getDay());
-console.log(theDate.getMonth()); //month in 0 indexing means if its march means 3 ao i gives us 2 so usually we add 1 to it
+console.log(theDate.getMonth()); //month in 0 indexing means if its march means 3 so it gives us 2 so usually we add 1 to it
 console.log(theDate.getMonth() + 1); //Now gives right month
 console.log(theDate.getHours());
 console.log(theDate.getFullYear());
@@ -66,7 +63,7 @@ console.log(theDate.getUTCMilliseconds());
 console.log(theDate.getMilliseconds());
 
 
-//Uses(Method to write) of these specification
+//Uses(Way to write) of these specification
 let theNewDate = new Date() 
 console.log(`Today's date is ${theNewDate.getDate()} and a happy ${theNewDate.getDay()}, Now we are going to celebrate birthday of dear at sharp ${theNewDate.getHours()} O'Clock & ${theNewDate.getMinutes()} min`);
 
@@ -76,7 +73,7 @@ let dayOfWeek = theDate.getDay();
 const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 console.log(dayNames[dayOfWeek]);
  
-//
+//Provide abbrevation of that particular day
 const todaysDate = new Date()
 let shortDay = todaysDate.toLocaleString('default', {weekday : "short"})
 console.log(shortDay);
