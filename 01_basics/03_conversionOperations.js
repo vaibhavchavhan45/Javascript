@@ -31,7 +31,7 @@ false ==> 0
 
 let nums = 33;
 let convertInString = String (nums);
-console.log(convertInString);        //op --> 33 
+console.log(convertInString);        //op --> 33
 console.log(typeof convertInString); //String
 
 
