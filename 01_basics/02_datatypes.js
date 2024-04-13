@@ -6,7 +6,7 @@ console.log(typeof name);
 
 console.log(typeof undefined)  //o/p --> undefined
 
-console.log(typeof null)      ////o/p --> object
+console.log(typeof null)      //o/p --> object
 
 
 
