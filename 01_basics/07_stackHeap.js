@@ -19,4 +19,4 @@ obj2.Id = "456789"
 
 console.log(obj.Id);  
 console.log(obj2.Id);
-/***** obj is object which is a non-primitive datatype so it is allocated in the Heap,  Here,we assign all values of obj to obj2, In heap always reference is given means o   riginal value is given. When we made a chane in obj2'Id then it also reflects in obj's Id..IN HEAP ALWAYS REFERENCE(ORIGINAL VALUE) IS GIVEN NOT COPY *****/
+/***** obj is object which is a non-primitive datatype so it is allocated in the Heap,  Here,we assign all values of obj to obj2, In heap always reference is given means original value is given. When we made a change in obj2'Id then it also reflects in obj's Id..IN HEAP ALWAYS REFERENCE(ORIGINAL VALUE) IS PROVIDED NOT COPY *****/
