@@ -8,7 +8,7 @@ const myName = "Vaibhav"
 const myTown = "Arni"
 console.log(`My name is ${myName} and I am from ${myTown}`);
 
-//Another way to declare string in the form of onject
+//Another way to declare string in the form of object(using new keyword)
 const gameName = new String('vaibhav-c');
 console.log(gameName);
 
