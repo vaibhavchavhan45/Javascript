@@ -6,8 +6,11 @@ const course = {
 }
 console.log(course.courseName);
             //OR
-const {courseInstructor} = course     //Extraxt the value of courseInstructor from course object
+const {courseInstructor} = course     //Extract the value of courseInstructor from course object
 console.log(courseInstructor);
             //OR
-const {courseDuration : time} = course //Extraxt the value of courseDuration from course object also change the key name courseDuration to time(destructuring of objects)
+const {courseDuration : time} = course // Extract the value of courseDuration from course object and store it in a variable named 'time' (object destructuring) but, original key of object(courseDuration) doesn't replaced by the new variable(time)
 console.log(time);
+
+//verifying the above comment is true or not
+console.log(Objects.keys(course));
