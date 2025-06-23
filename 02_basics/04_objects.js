@@ -1,13 +1,15 @@
-//singleton object
+//non-singleton object --> A non-singleton object is when you create many separate objects, each with its own data.They are copies, not the same object.
+
 const myObject = new Object ()
 
-//non-singleton object
-const nonSingleTonObject = {}
+//singleton object --> A singleton object is an object that is created only once in your program.You use and refer to that same object every time.
 
-nonSingleTonObject.email = "chavhan@google.com"
-nonSingleTonObject.id = "200645BE"
-nonSingleTonObject.isLoggedIn = false
-console.log(nonSingleTonObject);
+const SingleTonObject = {}
+
+SingleTonObject.email = "chavhan@google.com"
+SingleTonObject.id = "200645BE"
+SingleTonObject.isLoggedIn = false
+console.log(SingleTonObject);
 
 const user = {
     email : "vc@gmail.com",
@@ -62,7 +64,7 @@ console.log(myNewObj);
 
 console.log(Object.keys(myNewObj));    //Print all the keys(excluded their values) of given object
 console.log(Object.values(myNewObj));  //Print all the values (excluded keys) of given object
-console.log(Object.entries(myNewObj)); //Print all the keys with theire respective values
+console.log(Object.entries(myNewObj)); //Print all the keys with their respective values
 
 console.log(myNewObj.hasOwnProperty("name"));  //To check that key exists in object or not
 
