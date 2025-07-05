@@ -1,7 +1,7 @@
 //for of loop on array
 let arr = [100, 200, 300, 400, 500]
 for (const i of arr) {
-    console.log(`The values in array are : ${i}`);
+    console.log(`The value in array is : ${i}`);
 }
 
 //for of loop on string
@@ -24,6 +24,7 @@ const myMap = new Map()
 myMap.set('IN' , 'INDIA')
 myMap.set('AUS' , 'AUSTRALIA')
 myMap.set('USA' , 'UNITED STATES OF AMERICA')
+myMap.set('IN' , 'INDIANS') //we can't set same value for key in map more than once, it will not run and map knows for its distinst values
 console.log(myMap);
 
 for (const key of myMap) {
@@ -54,3 +55,30 @@ for (const [game , value] of obj) {
     console.log(game , ' :- ' , value);
 }
 */
+
+//for-of loop on objects in array [ {}, {}, {}]
+let newArr = [
+
+    {
+    languageName : "Javascript",
+    extention : ".js"
+    },
+
+    {
+    languageName : "python",
+    extention : ".py"
+    },
+
+    {
+    languageName : "java",
+    extention : ".java"
+    }
+
+]
+
+for(let i of newArr){
+    console.log(i);                //print all objects in array
+    console.log(i.languageName);   //print respective values of key (of objects) in an array
+    console.log(i.extention);      //print respective values of key (of objects) in an array
+    console.log(`the ext for ${i.languageName} is ${i.extention}`);
+}
