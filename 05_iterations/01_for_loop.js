@@ -9,7 +9,7 @@ for (let i = 1; i <= 50; i++) {
 for (let i = 1; i <= 10; i++) {
         console.log(`Outer loop i : ${i}`);
     for (let j = 1; j <=5 ; j++) {
-        console.log(`Inner loop value j: ${j} and inner loop ${i}`); 
+        console.log(`Inner loop value j: ${j} and outer loop ${i}`); 
     }
 }
 
