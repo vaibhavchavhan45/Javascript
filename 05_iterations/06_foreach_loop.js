@@ -6,7 +6,7 @@ code.forEach( function (i) {
 } )
 
 
-//way 2 : forEach loop on array
+//way 2 : forEach loop on array (arrow func.)
 const coding = [ "REACT", "NODE", "NEXT", "EXPRESS", "vue"]
 
 coding.forEach( (item) => {
@@ -22,14 +22,37 @@ function program(item){
 }
 programming.forEach(program)   //Give REFERENCE of FUNCTION (ONLY NAME) as a parameter do not execute function there like program()
 
+//way 4 : forEach loop on array (arrow func.)
+let arrays = [100,200,300,400,500]
+
+let a = (index) => {
+    console.log(index);
+}
+arrays.forEach(a)
+
 
 //forEach loop receive only 3 parameter as elements, index and given array (u can pass any value whatever u want, there is no such issue to use only item,index,array u can use a,b,c)
 const codeTool = ["VS CODE", "INTELIJ", "JUPYTER", "SUBLIME"]
-codeTool.forEach( (item, index, array, b) => {
-    console.log(item, index, array, b);
+codeTool.forEach( (item, index, array) => {
+    console.log(item, index, array);        
 })
 
-//forEach loop for objects in array [ {}, {}, {}]
+
+const codeTools = ["VS CODE", "INTELIJ", "JUPYTER", "SUBLIME"]
+codeTools.forEach( (item, index) => {
+    console.log(item, index);        //u can also use only two parameter as elements and index
+})
+
+
+//Another way to print elements,index and array(using reference of func.)
+let arr = [10,20,30,40,50]
+function a(item,indx,arr){
+    console.log(item,indx,arr);
+}
+arr.forEach(a)
+
+
+//forEach loop on objects in array [ {}, {}, {}]
 const myCode = [
     {
         languageName : "JAVASCRIPT",
@@ -47,6 +70,7 @@ const myCode = [
     }
 ]
 myCode.forEach( (item) => {
+    console.log(item);  //Print whole object(one object at atime)
     console.log(item.languageName);
     console.log(item.languageExtension);
     console.log(`The extension for ${item.languageName} language is ${item.languageExtension}`);
