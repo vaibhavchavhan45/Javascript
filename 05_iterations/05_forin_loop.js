@@ -7,7 +7,7 @@ const obj = {
     car5 : "ROLLS ROYCE"
 }
 for (const key in obj) {
-    console.log(`${key} :- ${obj [key] }`);
+    console.log(`${key} :- ${obj [key]}`);
 }
 
 
@@ -29,3 +29,31 @@ for (const key in newMap) {
     console.log(newMap [key]);
 }
 */
+
+
+let myArr = [
+
+    {
+    languageName : "Javascript",
+    extention : ".js"
+    },
+
+    {
+    languageName : "python",
+    extention : ".py"
+    },
+
+    {
+    languageName : "java",
+    extention : ".java"
+    }
+
+]
+
+for(let item in myArr){
+    console.log(item);                      //Print index of array
+    console.log(myArr[item]);               //print all objects in array
+    console.log(myArr[item].languageName);  //print respective values of key of objects in an array
+    console.log(myArr[item].extention);     //print respective values of key of objects in an array
+    console.log(`The extention for ${myArr[item].languageName} is ${myArr[item].extention}`);
+}
