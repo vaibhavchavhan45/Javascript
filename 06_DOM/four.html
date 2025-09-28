@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Edit</title>
+</head>
+
+<body style="background-color : #212121; color : #fff">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+
+
+
+<script>
+    function addLanguage(langName){
+    let li = document.createElement("li")
+    li.innerHTML = `${langName}`
+    document.querySelector(".language").appendChild(li)
+}
+addLanguage("Python")
+addLanguage("golang")
+
+function addLanguageInOptimizeWay(langName){
+    let li = document.createElement("li")
+    li.appendChild(document.createTextNode(langName))
+    document.querySelector(".language").appendChild(li)
+}
+addLanguageInOptimizeWay("Rust")
+
+
+//Edit
+/*
+let secondLang = document.querySelector("li:nth-child(2)")
+secondLang.innerHTML = "Ruby"
+OR
+let secondLang = document.querySelector("li:nth-child(2)")
+secondLang.textContent = "Ruby"
+*/
+
+//OR
+let secondLang = document.querySelector("li:nth-child(2)")
+let newLi = document.createElement("li")
+newLi.appendChild(document.createTextNode("Ruby"))
+secondLang.replaceWith(newLi)
+
+//Edit : e.g. 2
+/*
+let firstlang = document.querySelector("li:nth-child(1)")
+firstlang.innerHTML = "TypeScript"
+//OR
+let firstlang = document.querySelector("li:nth-child(1)")
+firstlang.textContent = "TS"
+*/
+
+//OR
+// let firstlang = document.querySelector("li:nth-child(1)")
+// let myLi = document.createElement("li")
+// myLi.appendChild(document.createTextNode("TypeScript"))
+// firstlang.replaceWith(myLi)
+
+//OR
+let firstlang = document.querySelector("li:first-child")
+firstlang.outerHTML = '<li>TypeScript</li>'
+
+//Remove
+let lastLang = document.querySelector("li:last-child")
+lastLang.remove()
+
+</script>
+</html>
