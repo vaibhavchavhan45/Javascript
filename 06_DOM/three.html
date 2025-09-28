@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color : #212121; color : #fff">
+    
+</body>
+<script>
+    //creating DOM element
+   let div =  document.createElement("div")
+   console.log(div);
+   div.id = Math.random() * 10 + 1
+   div.className = "main"
+   div.style.padding = "10px"
+   div.style.color = "orange" //These . method of setting attributes takes 2 trips one for over-write i.e first select the existing value brings those values and then set the new values
+   div.setAttribute("title", "generated-title")  //This is more preferable than all above methods of setting attributes because it directly set the value
+
+   //div.innerHTML = "Vaibhav Chavhan"  //OR innerText
+                    //OR
+   let textNode = document.createTextNode("Vaibhav") //This method is more feasible than innerHTML because innerHTML brings the present existing value for over-write meanwhile, createTextNode() directly set the attribute or text or value
+   div.appendChild(textNode)
+
+   document.body.appendChild(div)//Show the DOM ELement(div) on webpage.
+</script>
+</html>
