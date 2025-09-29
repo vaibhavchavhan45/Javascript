@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Vaibhav</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    setTimeout(function (){
+        console.log("vc");
+    }, 5000)
+
+    //OR
+    let sayMyName = function (){
+        console.log("vac");
+    }
+    setTimeout(sayMyName, 6000)
+
+    //Changing inner text of h1 tag
+    const changeText = function (){
+        document.querySelector('h1').innerHTML = "Vaibhav Chavhan"
+    }
+    let st = setTimeout(changeText, 4000) //the text changes to Vaibhav Chavhan from Vaibhav after 2 seconds
+    
+    //we want that ki when I click on stop button then original name(Vaibhav) should display on webpage not the changed one(Vaibhav Chavhan)
+    document.querySelector("button").addEventListener('click', function(){
+        clearTimeout(st) //If I pressed stop button before the the timing of setTimeout then settimeout will not execute because we clr that timeout
+        console.log("Stopped");
+    })
+
+</script>
+</html>
