@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Vaibhav</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<Script>
+    let a = setInterval(function (){
+        console.log("vc");
+    }, 1000)
+    clearInterval(a)
+
+   //OR
+   let cb = function (){
+        console.log("vac");
+   }
+   let b = setInterval(cb,2000)
+   clearInterval(b)
+
+   //3 parameters
+   let sayHi = function(str){
+    console.log(str);
+   }
+   let intervID = setInterval(sayHi, 2000, "hi")
+   clearInterval(intervID)
+
+   //Task : When u click on start the printing should start and when u click stop then printing should stop
+   let interval;
+    document.getElementById('start').addEventListener('click', function(){
+        interval = setInterval(function(){
+        console.log(document.querySelector('h1').innerHTML);
+    }, 1000)
+})
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(interval)
+    })
+
+
+</Script>
+</html>
