@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML events</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://www.pexels.com/photo/dandelion-grayscale-photography-21323/" alt="photoshop"></li>
+
+            <li><img width="200px" id="balloon" src="https://www.pexels.com/photo/flying-hot-air-balloon-above-snow-covered-mountain-1740103/" alt="image2"></li>
+
+            <li><img width="200px" id="ground" src="https://www.pexels.com/photo/seashore-3540807/" alt="image3" onclick="alert('vc')"></li>
+
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // If we clock on iamges of id baloon then it gives us alert as "balloon clicked".
+    //But, This approach gives less features that's why we don't use it
+
+    // document.getElementById('balloon').onclick = function(){
+    //     alert("balloon clicked")
+    // }
+
+
+    //This is the best approach which we should use(This thing consist of 3 parameters as : 
+    // 1.event 2.work(in terms of function) 3.false (default i.e. not mandatory to write) )
+
+    // document.getElementById('balloon').addEventListener('click', function(){
+    //     alert('balloon clicked again')
+    // })
+
+    //As we click on image with id balloon then it i.e. e gives us object as Pointer Event which consist of too many values(properties) like bubble, view, timeStamp etc. etc.
+
+    // document.getElementById('balloon').addEventListener('click', function (e){
+    //     console.log(e)
+    // })
+
+    //Some useful Events 
+    //type, timeStamp, defaultPrevented
+    //target, toElement, srcElement, currentTarget
+    //clientX, clientY, screenX, scrrenY
+    //AltKey ShiftKey, ctrlKey, keyCode(code for key A, code for key r etc.)
+
+    //Event bubbling(false) : Inner to Outer
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("Clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('balloon').addEventListener('click', function(e){
+    //     console.log("Balloon touched");
+    //     e.stopPropagation() //If u don't want propagation i.e. you just want ki if I clicked on balloon image then also I don't want printing of "Clicked inside the ul"
+    // }, false)
+
+
+    //Event Capturing(true) : Outer to Inner
+    // document.getElementById("images").addEventListener('click', function(e){
+    //     console.log("Clicked on ul");
+    // }, true)
+
+    // document.getElementById("balloon").addEventListener('click', function(e){
+    //     console.log("balloon clicked");
+    // }, true)
+
+    //preventDefault() : we will not redirect to google after clicking the hyperlink on webpage
+    // document.getElementById("google").addEventListener('click', function (e){
+    //     e.preventDefault() 
+    //     console.log("google clicked");
+    // }, false)
+
+//Most Imp.
+//     //Removing all the images after clicking on it
+//     document.querySelector('#images').addEventListener('click', function (e){
+//         console.log(e.target.parentNode);  
+//         let removeIt = e.target.parentNode //li
+//         removeIt.remove()
+//         //OR
+//         //removeIt.parentNode.removeChild(removeIt) //i.e. li ka parent ul ab ul ko uss child ko remove karo jo select hua hai(removeIt variable consist of li)
+
+
+
+//         //yes and that's all about removing images if u click on images it will be deleted
+//         //But, Incase if u click on li on webpage i.e. bullet on webpage then it will remove all images and google link in one go
+//         //If u click on bullet point means u are clicking on li items i.e. e.target is li
+//         //e.target.parentNode ---> li ka parent i.e. ul 
+//         //removeIt variable holds this e.target.parentNode as ul and u said
+//         //removeIt.remove() means remove ul
+//         //that's why whole ul got deleted in one click
+//     }, false)
+
+
+
+
+//But, we don't want ki one go pura ul udd jaaye, we just want ki bss images delete ho agar images pe click hota hai to agar anyhow li tag pe click ho gya to kuch naa ho iske liye simple sa if statement lagado
+    document.querySelector('#images').addEventListener('click', function (e){
+        console.log(e.target.tagName); // just gives tagName of the jispe click kiya wo i.e.if click on images then IMG will print, if click on li then LI will print simple
+        if(e.target.tagName === 'IMG'){ 
+            //if u found ki click element ka tag agar image hai to uske parent ko remove krdo basically uss image ki li tag ke saath uss image ko delete/remove krdo
+            let removeIt = e.target.parentNode //li
+            removeIt.remove()
+
+            //console.log(e.target.id); //if u wnt ki jo remove ho rha hai uska id chahiye then do this log below if condition, if not needed then no worries
+        }
+        
+    }, false)
+
+    
+    //Explaination about some basic events
+        //e.target : Gives the actual DOM element on which the event occurred means from which target the event is occuring(basically provide all the content as it is from img tag)
+    //e.target.parentNode : parent element of our target, target is basically image So, parent of every image here is li tag i.e. every image is placed in li tag
+ </script>
+</html>
