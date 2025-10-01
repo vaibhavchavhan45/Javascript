@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+</body>
+<script>
+        const requestUrl = "https://api.github.com/users/vaibhavchavhan45"
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET',requestUrl)
+        xhr.onreadystatechange = function () {
+            if(xhr.readyState === 4 && xhr.status === 200){
+                let data = JSON.parse(this.responseText)
+                console.log(data.followers);
+            }
+        }
+        xhr.send()
+
+
+//XMLHttpRequest : Send a request to a server and get data back — without reloading the webpage.
+//Steps to make an AJAX request using XMLHttpRequest : open() i.e. Initialize the request, send() i.e. Sends request, readyState() i.e. it handles server responce
+
+/*   
+| `readyState` |    Name            |  Meaning                                                           |
+| ------------ | ------------------ | ------------------------------------------------------------------ |
+| `0`          | `UNSENT`           | Request not created yet (you haven’t called `open()` yet)          |
+| `1`          | `OPENED`           | Request is created and ready to be sent (`open()` has been called) |
+| `2`          | `HEADERS_RECEIVED` | Server has accepted the request and sent response headers          |
+| `3`          | `LOADING`          | Response body is being received (partial data is coming)           |
+| `4`          | `DONE`             | Full response has been received — request is complete              |
+
+
+When the code runs, we first create an XMLHttpRequest object. Then we use open() to prepare the request 
+with a method like GET and a URL. After that, we call send() to actually send the request to the 
+server. While the request is in progress, the onreadystatechange function runs every time the 
+state changes. When readyState becomes 4 and status is 200, it means the full response has been 
+received successfully. We take the response from responseText, and then use JSON.parse()
+ to convert it from a string into a JavaScript object so we can access specific values like data.followers.
+
+
+ //status === 200 meaning : Request was successful and the server sent the expected response.
+
+| Status Code | Meaning                  | When it Happens                                                       |
+| ----------- | -------------------------------------------------------------------------------------------------- |
+| `200`       | ✅ OK                    | The request was successful and the server sent the response properly. |
+| `404`       | ❌ Not Found             | The URL is wrong or the resource doesn't exist.                       |
+| `500`       | 💥 Internal Server Error | Something went wrong on the server.                                   |
+| `403`       | 🔒 Forbidden             | You’re not allowed to access this resource.                           |
+| `401`       | 🔐 Unauthorized          | You need to log in or provide a valid token.                          |
+
+*/
+
+
+
+</script>
+</html>
